@@ -34,6 +34,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: JohnnyMorganz/stylua-action@v4
         with:
-          version: 4
+          version: latest
           token: ${{ SECRETS.GITHUB_TOKEN }}
           args: --check
