@@ -4,31 +4,50 @@
     "$className": "DataModel",
 
     "ReplicatedStorage": {
-      "$className": "ReplicatedStorage",
-      "Shared": {
-        "$path": "src/shared"
+      "R-Storage": {
+        "$className": "Folder",
+        "$path": "src/ReplicatedStorage/"
       }
     },
 
     "ServerScriptService": {
-      "$className": "ServerScriptService",
       "Server": {
-        "$path": "src/server"
+        "$className": "Folder",
+        "$path": "src/ServerScriptService/"
+      }
+    },
+
+    "ServerStorage": {
+      "S-Storage": {
+        "$className": "Folder",
+        "$path": "src/ServerStorage"
       }
     },
 
     "StarterPlayer": {
-      "$className": "StarterPlayer",
+      "Starter": {
+        "$className": "Folder",
+        "$path": "src/StarterPlayer"
+      },
       "StarterPlayerScripts": {
         "Client": {
-          "$path": "src/client"
+          "$className": "Folder",
+          "$path": "src/StarterPlayer/StarterPlayerScripts"
+        }
+      },
+      "StarterCharacterScripts": {
+        "Client": {
+          "$className": "Folder",
+         "$path": "src/StarterPlayer/StarterCharacterScripts"
         }
       }
     },
 
     "Workspace": {
-      "$className": "Workspace",
-      "$path": "src/workspace",
+      "Main": {
+        "$className": "Folder",
+        "$path": "src/Workspace"
+      },
       "$properties": {
         "FilteringEnabled": true
       },
@@ -36,8 +55,33 @@
         "$className": "Terrain"
       }
     },
+
+    "StarterGui": {
+      "Starter": {
+        "$className": "Folder",
+        "$path": "src/StarterGui"
+      }
+    },
+
+    "StarterPack": {
+      "Starter": {
+        "$className": "Folder",
+        "$path": "src/StarterPack"
+      }
+    },
+
+    "Teams": {
+      "Teams": {
+        "$className": "Folder",
+        "$path": "src/Teams"
+      }
+    },
+
     "Lighting": {
-      "$className": "Lighting",
+      "Lights": {
+        "$className": "Folder",
+        "$path": "src/Lighting"
+      },
       "$properties": {
         "Ambient": [
           0,
@@ -50,11 +94,16 @@
         "Technology": "Voxel"
       }
     },
+
     "SoundService": {
       "$className": "SoundService",
       "$properties": {
         "RespectFilteringEnabled": true
       }
+    },
+
+    "MaterialService": {
+      "$path": "src/MaterialService"
     }
   }
 }
