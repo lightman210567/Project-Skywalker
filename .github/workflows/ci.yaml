@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install foreman
       uses: Roblox/setup-foreman@v1
@@ -31,8 +31,9 @@ jobs:
     name: Styling
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: JohnnyMorganz/stylua-action@1.0.0
+      - uses: actions/checkout@v4
+      - uses: JohnnyMorganz/stylua-action@v4
         with:
+          version: 4.0.0
           token: ${{ SECRETS.GITHUB_TOKEN }}
           args: --check
