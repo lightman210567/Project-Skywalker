@@ -1,9 +1,9 @@
-name: Deploy to Staging
+﻿name: Deploy to Production
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types:
+      - released
 
 concurrency:
   group: Deploy
@@ -29,4 +29,4 @@ jobs:
         run: rojo build -o build.rbxlx
 
       - name: Publish
-        run: rbxcloud experience publish -f build.rbxlx -p 18536340085 -u 6280552192 -t published -a ${{ SECRETS.CD_API_KEY }}
+        run: rbxcloud experience publish -f build.rbxlx -p 18536329017 -u 6280548934 -t published -a ${{ SECRETS.CD_API_KEY }}
