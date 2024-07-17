@@ -1,0 +1,29 @@
+name: Deploy to staging
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses:
+          actions/checkout@v4
+
+      - name: Setup foreman
+        uses:
+          Roblox/setup-foreman@v1
+        with:
+          version: "^1.0.0"
+          token: ${{ SECRETS.GITHUB_TOKEN }}
+
+      - name: Build
+        run: rojo build -o build.rbxlx
+
+      - name: Publish
+        run: rbxcloud experience publish -f build.rbxlx -p 18536340085 -u 6280552192 -t published -a ${{ SECRETS.CD_API_KEY }}
