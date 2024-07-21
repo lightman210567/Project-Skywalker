@@ -20,7 +20,11 @@
     "ServerStorage": {
       "S-Storage": {
         "$className": "Folder",
-        "$path": "src/ServerStorage"
+        "$path": "src/ServerStorage",
+        "Animations": {
+          "$className": "Folder",
+          "$path": "src/ServerStorage/Animations"
+        }
       }
     },
 
