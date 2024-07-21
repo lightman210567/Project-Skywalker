@@ -3,7 +3,10 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerStorage = game:GetService("ServerStorage")
 local Knit = ReplicatedStorage["R-Storage"].Packages.Knit
+Knit = require(Knit)
 
-Knit.AddServicesDeep(ServerStorage["S-Storage"].Serivces)
+local servicesFolder = ServerStorage["S-Storage"].Services
+
+Knit.AddServicesDeep(servicesFolder)
 
 Knit.Start():catch(warn)
