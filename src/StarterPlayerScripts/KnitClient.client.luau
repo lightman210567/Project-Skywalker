@@ -3,8 +3,7 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Knit = ReplicatedStorage["R-Storage"].Packages.Knit
 Knit = require(Knit)
-local Component = ReplicatedStorage["R-Storage"].Packages.Component
-
-Component.Auto(script.Parent.Components) -- automatically load components
-
 Knit.Start():catch(warn)
+
+local LightsaberService = Knit.GetService("LightsaberService")
+LightsaberService:attack()
