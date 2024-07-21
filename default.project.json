@@ -28,15 +28,16 @@
       "Starter": {
         "$className": "Folder",
         "$path": "src/StarterPlayer"
+      },
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "$path": "src/StarterPlayerScripts"
+      },
+  
+      "StarterCharacterScripts": {
+        "$className": "StarterCharacterScripts",
+        "$path": "src/StarterCharacterScripts"
       }
-    },
-
-    "StarterPlayerScripts": {
-      "$path": "src/StarterPlayerScripts"
-    },
-
-    "StarterCharacterScripts": {
-      "$path": "src/StarterCharacterScripts"
     },
 
     "Workspace": {
